@@ -6,7 +6,7 @@
             <form autocomplete="off" action="{% url 'index' %}">
                 {% csrf_token %}
                 <div class="form-group">
-                    <h1><a href="{% url 'index' %}">Buscador Geek</a></h1>
+                    <h1><a href="{% url 'index' %}">Buscador de Localização</a></h1>
                     <h4>[{{ city }} {% if country %} - {{ country }} {% endif %}]</h4>
                 </div>
                 <div class="form-group">

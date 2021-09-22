@@ -8,7 +8,7 @@ YELP_SEARCH_ENDPOINT = 'https://api.yelp.com/v3/businesses/search'
 
 
 def yelp_search(keyword=None, location=None):
-    headers = {'Authorization': 'Bearer ' + settings.YELP_API_KEY}
+    headers = {"Authorization": "Bearer " + settings.YELP_API_KEY}
 
     if keyword and location:
         params = {'term': keyword, 'location': location}
@@ -25,7 +25,7 @@ def get_client_data():
     ip = get_random_ip()
     try:
         return g.city(ip)
-    except geoip2.errors.AdressNotFoundError:
+    except geoip2.errors.AddressNotFoundError:
         return None
 
 
