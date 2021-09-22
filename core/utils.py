@@ -20,7 +20,7 @@ def yelp_search(keyword=None, location=None):
     return r.json()
 
 
-def get_client_city_data():
+def get_client_data():
     g = GeoIP2()
     ip = get_random_ip()
     try:
